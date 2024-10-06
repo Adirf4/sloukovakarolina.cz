@@ -296,11 +296,3 @@ h1 {
     cursor: pointer;
 }
 
-@media (min-width: 768px) {
-    .menu {
-        gap: 100px;
-    }
-    .hero-text h2 {
-        font-size: 48px;
-    }
-}

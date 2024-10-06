@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Vytvoření časových slotů
     function generateSlots() {
-        const days = ['28.10', '29.10', '30.10', '31.10', '1.11', '2.11', '3.11', '4.11', '5.11'];
+        const days = ['28.10.', '29.10.', '30.10.', '31.10.', '1.11.', '2.11.', '3.11.', '4.11.', '5.11.'];
         const slots = [];
 
         days.forEach(day => {
