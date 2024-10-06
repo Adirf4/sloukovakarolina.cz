@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervace - Karolína Slouková - Fotografka</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="icon" href="Images/photo.png" type="image/x-icon">
+</head>
+<body>
+
+<!-- Navigace -->
+<nav class="navbar">
+    <ul class="menu">
+        <li><a href="index.html">
+            <img src="Ikony/photo.png" alt="logo" width="40px" height="40px">
+        </a></li>
+        <li>
+            <a href="#" class="dropbtn" onclick="toggleDropdown()">PORTFOLIO &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="#">RODINNÉ FOCENÍ</a></li>
+                <li><a href="#">TĚHOTENSKÉ FOCENÍ</a></li>
+                <li><a href="#">NOVOROZENECKÝ LIFESTYLE</a></li>
+                <li><a href="#">SVATBY</a></li>
+            </ul>
+        </li>
+        <li><a href="#">O MNĚ</a></li>
+    </ul>
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="Images/logo.jpg" alt="logo" width="360" height="240"> 
+        </a>
+      
+    </div>
+    
+    <ul class="menu">
+        <li><a href="#">CENÍK</a></li>
+        <li><a href="rezervace.html">REZERVACE</a></li>
+        <li><a href="kontakt.html">KONTAKT</a></li>
+    </ul>
+</nav>
+<h1>Rezervační systém mini focenní</h1>
+    <div id="calendar"></div>
+  
+      <!-- Modal okno -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Rezervace termínu</h2>
+            <form id="reservationForm">
+                <label for="name">Jméno a příjmení:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Telefonní číslo:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <div class="g-recaptcha" data-sitekey="6Ldtg1gqAAAAAGAC-CvPWZRDQuvDwdeqAXLmlrbe"></div>
+                <input type="hidden" id="selectedSlot" name="selectedSlot">
+                <button type="submit">Rezervovat</button>
+            </form>
+        </div>
+    </div>
+
+<!-- Patička -->
+<footer>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/karolinasloukova_photo/" target="_blank">
+            <img src="Ikony/instagram.png" alt="Instagram" title="Instagram">
+        </a>
+        <a href="https://www.facebook.com/search/top?q=karol%C3%ADna%20sloukov%C3%A1%20photography" target="_blank">
+            <img src="Ikony/facebook.png" alt="Facebook" title="Facebook">
+        </a>
+        <a href="https://phone.me/" target="_blank">
+            <img src="Ikony/phone.png" alt="phone" title="Telephone">
+        </a>
+        <a href="mailto:k_sloukovaphoto@seznam.cz" target="_blank">
+            <img src="Ikony/email.png" alt="email" title="Email">
+        </a>
+    </div>
+        <br>
+        <p>&copy; 2024 Karolína Slouková</p>
+</footer>
+<!-- JavaScript pro změnu fotek -->
+<script src="script.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+</html>

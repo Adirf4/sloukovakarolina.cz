@@ -1,0 +1,306 @@
+/* Základní styl */
+
+@font-face {
+    font-family: 'Beautifully Delicious'; 
+    src: url(Fonts/BDScript-Bold.ttf);
+    
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial';
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Navigace */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 80px
+    
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #c5cedc;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    list-style: none;
+}
+
+.menu li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    margin: 5px 0;
+}
+
+.dropdown a {
+    padding: 10px;
+    display: block;
+    color: #9d9494;
+    font-size: 14px;
+}
+
+.dropdown a:hover {
+    background-color: #cdbbaa;
+    color: #fff;
+}
+
+.dropdown-content {
+    
+ 
+    display: none;
+    }
+
+/* Logo */
+.logo h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Hlavní sekce */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+/* Patička */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5efef;
+    color: #151515;
+}
+
+.social-icons {
+    margin-top: 10rem;
+
+}
+
+.social-icons a {
+    margin: 0 3px;
+    display: inline-block;
+    background-color: #cdbbaa;
+    padding: 12px;
+    padding-bottom: 7.5px;
+    border-radius: 10%; /* Kulaté okraje kolem ikon */
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #f5efef;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Sekce s měnící se fotkou */
+.image-slider {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.image-slider img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Sekce Kontakt */
+.contact-header {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.contact-header h2 {
+    font-size: 32px;
+    color: #333;
+}
+
+.contact-header p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Sekce s formulářem a pozadím fotky */
+.contact-form-section {
+    background: url('background-photo.jpg') no-repeat center center/cover;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #cdbbaa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ccb29a;
+}
+
+h1 {
+    font-family:'Beautifully Delicious';
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 70px;
+
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.slot {
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slot.available {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.slot.booked {
+    background-color: #F44336;
+    color: white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 500px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .menu {
+        gap: 100px;
+    }
+    .hero-text h2 {
+        font-size: 48px;
+    }
+}
