@@ -1,0 +1,1 @@
+# sloukovakarolina.cz
